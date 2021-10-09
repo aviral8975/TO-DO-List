@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/tiles"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_margin="20dp"
+
+            >
+
+            <CheckBox
+                android:id="@+id/cb_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:buttonTint="#FFFFFF"
+                android:minWidth="0dp"
+                android:minHeight="0dp" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="298dp"
+                android:layout_height="wrap_content"
+                tools:text="ABCD"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/cb_1"
+                android:textColor="@color/white"
+                android:maxLines="1"
+
+                android:ellipsize="end"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                />
+            <ImageView
+                android:id="@+id/task_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_priority"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                 />
+
+
+        </RelativeLayout>
+
+
+
+</layout>

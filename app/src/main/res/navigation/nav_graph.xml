@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listfrag">
+
+    <fragment
+        android:id="@+id/listfrag"
+        android:name="com.example.to_do_list.ui.list.listfrag"
+        android:label="List"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listfrag_to_addEditTaskFrag2"
+            app:destination="@id/addEditTaskFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditTaskFrag"
+        android:name="com.example.to_do_list.ui.addedittask.AddEditTaskFrag"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_edit" >
+        <argument
+            android:name="task"
+            app:argType="com.example.to_do_list.data.Task"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/deleteAllCompletedDialogueFragment"
+        android:name="com.example.to_do_list.ui.deleteallcompleted.DeleteAllCompletedDialogueFragment"
+        android:label="DeleteAllCompletedDialogueFragment" /><action android:id="@+id/action_global_deleteAllCompletedDialogueFragment" app:destination="@id/deleteAllCompletedDialogueFragment"/>
+</navigation>
